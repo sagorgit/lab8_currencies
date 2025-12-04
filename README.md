@@ -61,33 +61,8 @@
 Во всех моделях реализованы геттеры и сеттеры с валидацией типов и значений.  
 При ошибках выбрасываются исключения TypeError или ValueError.
 
----
 
 ##  3. Структура проекта (MVC)
-
-Проект организован в соответствии с архитектурой MVC:
-
-
-myapp/
-├── models/
-│   ├── author.py
-│   ├── app.py
-│   ├── user.py
-│   ├── currency.py
-│   └── user_currency.py
-│
-├── templates/
-│   ├── index.html
-│   ├── users.html
-│   ├── currencies.html
-│   ├── user_detail.html
-│   └── author.html
-│
-├── utils/
-│   └── currencies_api.py
-│
-└── myapp.py
-
 
 ### • *Models (модели)*  
 Логика и структура данных.
@@ -174,14 +149,14 @@ python
 
 ## 5. Примеры работы приложения
 
-⚠ Сюда необходимо вставить собственные скриншоты страниц:  
+Сюда необходимо вставить собственные скриншоты страниц:  
 - /  
 - /users  
 - /user?id=1  
 - /currencies  
 - /author  
 
-## 📌 6. Тестирование
+## 6. Тестирование
 
 Для тестирования использован модуль unittest.
 
@@ -236,9 +211,6 @@ https://github.com/sagorgit/lab8_currencies/tree/main
 
 
 ## 9. Как запустить проект
-
-bash
-git clone <repo_url>
 cd lab8_currencies
 python -m venv .venv
 .venv\Scripts\activate        # Windows
