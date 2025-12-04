@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Курсы валют — {{ app_name }}</title>
+</head>
+<body>
+<h1>Курсы валют</h1>
+
+<nav>
+    <ul>
+        {% for item in navigation %}
+            <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
+        {% endfor %}
+    </ul>
+</nav>
+
+<table border="1" cellspacing="0" cellpadding="4">
+    <tr>
+        <th>ID</th>
+        <th>Цифровой код</th>
+        <th>Символьный код</th>
+        <th>Название</th>
+        <th>Номинал</th>
+        <th>Курс</th>
+    </tr>
+    {% for currency in currencies %}
+        <tr>
+            <td>{{ currency.id }}</td>
+            <td>{{ currency.num_code }}</td>
+            <td>{{ currency.char_code }}</td>
+            <td>{{ currency.name }}</td>
+            <td>{{ currency.nominal }}</td>
+            <td>{{ currency.value }}</td>
+        </tr>
+    {% endfor %}
+</table>
+
+<hr>
+<p>Автор: {{ author_name }} (группа {{ group }})</p>
+</body>
+</html>

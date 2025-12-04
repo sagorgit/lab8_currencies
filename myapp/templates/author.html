@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Об авторе — {{ app_name }}</title>
+</head>
+<body>
+<h1>Об авторе</h1>
+
+<nav>
+    <ul>
+        {% for item in navigation %}
+            <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
+        {% endfor %}
+    </ul>
+</nav>
+
+<p><strong>Имя автора:</strong> {{ author_name }}</p>
+<p><strong>Учебная группа:</strong> {{ group }}</p>
+
+<p>
+    Данная лабораторная работа выполнена в рамках курса по Python.
+    Приложение реализует простую клиент-серверную архитектуру и
+    использует шаблонизатор Jinja2.
+</p>
+
+<hr>
+<p>Автор: {{ author_name }} (группа {{ group }})</p>
+</body>
+</html>

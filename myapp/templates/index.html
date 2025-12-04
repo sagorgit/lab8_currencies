@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная — {{ app_name }}</title>
+</head>
+<body>
+<h1>Главная страница</h1>
+
+<nav>
+    <ul>
+        {% for item in navigation %}
+            <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
+        {% endfor %}
+    </ul>
+</nav>
+
+<h2>Информация о приложении</h2>
+<p><strong>Название:</strong> {{ app_name }}</p>
+<p><strong>Версия:</strong> {{ app_version }}</p>
+
+<h3>Автор</h3>
+<p><strong>Имя:</strong> {{ author_name }}</p>
+<p><strong>Группа:</strong> {{ group }}</p>
+
+<p>
+    Это простое клиент-серверное приложение на Python, которое
+    показывает курсы валют и позволяет пользователям подписываться
+    на интересующие их валюты.
+</p>
+
+<hr>
+<p>Автор: {{ author_name }} (группа {{ group }})</p>
+</body>
+</html>

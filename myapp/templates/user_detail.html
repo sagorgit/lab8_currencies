@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Пользователь — {{ user.name }}</title>
+</head>
+<body>
+<h1>Страница пользователя</h1>
+
+<nav>
+    <ul>
+        {% for item in navigation %}
+            <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
+        {% endfor %}
+    </ul>
+</nav>
+
+<h2>Информация о пользователе</h2>
+<p><strong>ID:</strong> {{ user.id }}</p>
+<p><strong>Имя:</strong> {{ user.name }}</p>
+
+<h3>Подписки на валюты</h3>
+{% if subscriptions %}
+    <ul>
+        {% for currency in subscriptions %}
+            <li>{{ currency.char_code }} — {{ currency.name }} ({{ currency.value }})</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Пока нет подписок на валюты.</p>
+{% endif %}
+
+<hr>
+<p>Автор: {{ author_name }} (группа {{ group }})</p>
+</body>
+</html>
