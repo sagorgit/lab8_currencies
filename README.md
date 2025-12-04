@@ -232,7 +232,7 @@ OK
 Пример:
 
 
-https://github.com/username/lab8-currencies
+https://github.com/sagorgit/lab8_currencies/tree/main
 
 
 ## 9. Как запустить проект
